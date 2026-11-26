@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #121212;
+  --accent-red: #ff2525;
+  --accent-crimson: #990000;
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+/* Mouse-following subtle ambient radial glow (updated via CSS vars) */
+.ambient-pointer-glow {
+  background: radial-gradient(
+    680px circle at var(--pointer-x, 50%) var(--pointer-y, 25%),
+    rgba(255, 37, 37, 0.085),
+    rgba(153, 0, 0, 0.03) 40%,
+    transparent 70%
+  );
+}
+
+/* Subtle section divider hairlines */
+.crimson-hairline {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 37, 37, 0.32) 25%,
+    rgba(255, 37, 37, 0.55) 50%,
+    rgba(255, 37, 37, 0.32) 75%,
+    transparent 100%
+  );
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #990000;
+}
+
+/* 3D card perspective utilities */
+.perspective-stage {
+  perspective: 1100px;
+}
+
+.tilt-surface {
+  transform-style: preserve-3d;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tilt-surface {
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+    transform: none !important;
+  }
+}

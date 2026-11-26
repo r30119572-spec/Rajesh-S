@@ -1,0 +1,20 @@
+[
+  {
+    "id": "MSG-C7EAAFE3",
+    "name": "Priya Nair",
+    "email": "priya.nair@example.com",
+    "subject": "Digital Marketing Role",
+    "message": "Hi Rajesh, impressed by your portfolio and SEO project work.",
+    "submittedAt": "2026-11-26T14:26:28.419Z",
+    "forwarded": false
+  },
+  {
+    "id": "MSG-47241A50",
+    "name": "Arjun Kumar",
+    "email": "arjun.kumar@example.com",
+    "subject": "SEO & Content Opportunity",
+    "message": "Hello Rajesh, we reviewed your portfolio and would like to connect.",
+    "submittedAt": "2026-11-26T14:28:07.664Z",
+    "forwarded": false
+  }
+]
